@@ -1,0 +1,1 @@
+PHASE 1 - A function declaration uses the function keyword followed by the name. Expression creates the function as a value and assigns it to a variable.
