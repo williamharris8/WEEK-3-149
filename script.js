@@ -29,3 +29,12 @@ function seniorDiscount(total) {
 
 console.log("Student:", applyDiscount(100, studentDiscount));
 console.log("Senior:", applyDiscount(100, seniorDiscount));
+
+function calculateFinalBill(price, quantity, discountCallback) {
+    const subtotal = calculatePrice(price, quantity);
+    const discounted = applyDiscount(subtotal, discountCallback);
+    const taxAmount = getTax(discounted, 0.07);
+    return discounted + taxAmount;
+}
+
+console.log("Final bill:", calculateFinalBill(20, 3, studentDiscount));
